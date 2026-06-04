@@ -7,6 +7,10 @@ export type InaugurationMessages = {
     highlight: string;
     rest: string;
   };
+  video: {
+    label: string;
+    title: string;
+  };
   meta: {
     date: { label: string; value: string };
     location: { label: string; value: string };

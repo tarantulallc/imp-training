@@ -9,6 +9,10 @@ export const inaugurationEn: InaugurationMessages = {
     highlight: "IMP Training",
     rest: "center in Kosovo is inaugurated.",
   },
+  video: {
+    label: "Inauguration",
+    title: "IMP Training center inauguration in Kosovo",
+  },
   meta: {
     date: { label: "Date", value: "2024" },
     location: { label: "Location", value: "Gjakova" },

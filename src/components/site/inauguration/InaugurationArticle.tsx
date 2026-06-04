@@ -1,4 +1,6 @@
+import { YouTubeEmbed } from "@/components/site/YouTubeEmbed";
 import { Container } from "@/components/ui/Container";
+import { INAUGURATION_YOUTUBE_ID } from "@/lib/inauguration-video";
 import type { InaugurationMessages } from "@/messages/inauguration";
 
 type InaugurationArticleProps = {
@@ -41,6 +43,14 @@ export function InaugurationArticle({ content }: InaugurationArticleProps) {
             value={content.meta.category.value}
           />
         </ul>
+
+        <div className="mt-10 sm:mt-12 lg:mt-14">
+          <YouTubeEmbed
+            videoId={INAUGURATION_YOUTUBE_ID}
+            title={content.video.title}
+            label={content.video.label}
+          />
+        </div>
 
         <hr className="mt-10 border-0 border-t border-border-strong/40 sm:mt-12 lg:mt-14" />
       </Container>

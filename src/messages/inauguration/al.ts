@@ -9,6 +9,10 @@ export const inaugurationAl: InaugurationMessages = {
     highlight: "IMP Training",
     rest: "qendra në Kosovë u inaugurua.",
   },
+  video: {
+    label: "Inaugurimi",
+    title: "Inaugurimi i qendrës IMP Training në Kosovë",
+  },
   meta: {
     date: { label: "Data", value: "2024" },
     location: { label: "Vendndodhja", value: "Gjakovë" },

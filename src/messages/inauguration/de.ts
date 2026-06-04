@@ -9,6 +9,10 @@ export const inaugurationDe: InaugurationMessages = {
     highlight: "IMP Training",
     rest: "Zentrum im Kosovo wurde eingeweiht.",
   },
+  video: {
+    label: "Einweihung",
+    title: "Einweihung des IMP Training Zentrums im Kosovo",
+  },
   meta: {
     date: { label: "Datum", value: "2024" },
     location: { label: "Ort", value: "Gjakova" },
