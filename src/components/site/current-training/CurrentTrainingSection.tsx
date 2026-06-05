@@ -14,7 +14,7 @@ export async function CurrentTrainingSection({
   const seeMoreHref = await localizeHref("/courses/cnc-operation-basics");
 
   return (
-    <section className="bg-black py-16 sm:py-24 lg:py-32 xl:py-40">
+    <section className="bg-[#0D1012] py-16 sm:py-24 lg:py-32 xl:py-40">
       <Container className="flex flex-col gap-8 sm:gap-10 lg:gap-14">
         <div className="flex flex-col gap-3 sm:gap-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-brand sm:text-[11px]">

@@ -1,6 +1,4 @@
-import { YouTubeEmbed } from "@/components/site/YouTubeEmbed";
 import { Container } from "@/components/ui/Container";
-import { INAUGURATION_YOUTUBE_ID } from "@/lib/inauguration-video";
 import type { InaugurationMessages } from "@/messages/inauguration";
 
 type InaugurationArticleProps = {
@@ -33,7 +31,10 @@ export function InaugurationArticle({ content }: InaugurationArticleProps) {
         </h1>
 
         <ul className="mt-8 grid grid-cols-1 gap-4 min-[480px]:grid-cols-3 sm:mt-10 sm:gap-6 lg:mt-12">
-          <MetaItem label={content.meta.date.label} value={content.meta.date.value} />
+          <MetaItem
+            label={content.meta.date.label}
+            value={content.meta.date.value}
+          />
           <MetaItem
             label={content.meta.location.label}
             value={content.meta.location.value}
@@ -43,14 +44,6 @@ export function InaugurationArticle({ content }: InaugurationArticleProps) {
             value={content.meta.category.value}
           />
         </ul>
-
-        <div className="mt-10 sm:mt-12 lg:mt-14">
-          <YouTubeEmbed
-            videoId={INAUGURATION_YOUTUBE_ID}
-            title={content.video.title}
-            label={content.video.label}
-          />
-        </div>
 
         <hr className="mt-10 border-0 border-t border-border-strong/40 sm:mt-12 lg:mt-14" />
       </Container>
@@ -63,7 +56,9 @@ export function InaugurationArticle({ content }: InaugurationArticleProps) {
             </p>
 
             <div className="border border-border-strong/60 p-5 sm:p-6">
-              <p className={metaLabelClass}>{content.sidebar.partnership.label}</p>
+              <p className={metaLabelClass}>
+                {content.sidebar.partnership.label}
+              </p>
               <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base sm:leading-[1.7]">
                 {content.sidebar.partnership.body}
               </p>

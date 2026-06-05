@@ -3,9 +3,9 @@ import type { AboutMessages } from "./types";
 export const aboutAl: AboutMessages = {
   hero: {
     eyebrow: "Rreth kompanisë IMP",
-    titleLine1: "I avancuar",
-    titleLine2: "teknologji",
-    titleLine3: "edukim",
+    titleLine1: "Teknologji",
+    titleLine2: "e avancuar",
+    titleLine3: "",
     paragraphs: [
       "IMP Training u themelua nga IMP në 2023, si pjesë e rrjetit global Haas HTEC.",
       "Misioni ynë është të transformojmë industrinë e prodhimit në Kosovë dhe Ballkan përmes arsimit CNC të klasës botërore.",
@@ -46,7 +46,7 @@ export const aboutAl: AboutMessages = {
       [
         {
           key: "graduates",
-          title: "Diplomuar të kualifikuar",
+          title: "Diplom e kualifikuar",
           description:
             "Synojmë të rrisim numrin e profesionistëve të përgatitur mirë për të mbushur pozitat kritike në industrinë e prodhimit që po rritet shpejt.",
         },

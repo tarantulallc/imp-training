@@ -7,11 +7,13 @@ type HtecStandardsSectionProps = {
   content: HtecMessages["standards"];
 };
 
-export async function HtecStandardsSection({ content }: HtecStandardsSectionProps) {
+export async function HtecStandardsSection({
+  content,
+}: HtecStandardsSectionProps) {
   const learnMoreHref = await localizeHref("/about");
 
   return (
-    <section className="relative overflow-hidden bg-black py-16 sm:py-24 lg:py-32 xl:py-40">
+    <section className="relative overflow-hidden bg-[#0E1214] py-16 sm:py-24 lg:py-32 xl:py-40">
       <span
         aria-hidden
         className="pointer-events-none absolute -left-[0.05em] top-1/2 hidden -translate-y-1/2 select-none font-display text-[clamp(8rem,22vw,18rem)] uppercase leading-none tracking-tight text-foreground/[0.04] lg:block"
@@ -23,7 +25,10 @@ export async function HtecStandardsSection({ content }: HtecStandardsSectionProp
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16 xl:gap-24">
           <div className="flex shrink-0 flex-col gap-5 lg:max-w-md xl:max-w-lg">
             <div className="flex items-center gap-4">
-              <span aria-hidden className="h-px w-10 shrink-0 bg-brand sm:w-12" />
+              <span
+                aria-hidden
+                className="h-px w-10 shrink-0 bg-brand sm:w-12"
+              />
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-brand sm:text-xs">
                 {content.eyebrow}
               </p>

@@ -63,7 +63,10 @@ export async function CncBasicsPage({ content }: CncBasicsPageProps) {
               <h2 className="font-display text-3xl uppercase tracking-tight text-foreground min-[400px]:text-4xl sm:text-5xl lg:text-6xl">
                 {content.intro.title}
               </h2>
-              <span aria-hidden className="mt-6 block h-px w-12 bg-brand sm:mt-8" />
+              <span
+                aria-hidden
+                className="mt-6 block h-px w-12 bg-brand sm:mt-8"
+              />
             </div>
 
             <div className="flex min-w-0 flex-1 flex-col gap-6 sm:gap-8">

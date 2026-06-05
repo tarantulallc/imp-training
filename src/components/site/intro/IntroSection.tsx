@@ -10,15 +10,19 @@ export function IntroSection({ content }: IntroSectionProps) {
   return (
     <section className="bg-black py-16 sm:py-24 lg:py-32 xl:py-40">
       <Container>
-        <div className="flex flex-col gap-10 sm:gap-12 lg:flex-row lg:items-start lg:gap-16 xl:gap-24">
-          <div className="flex w-full shrink-0 flex-col lg:max-w-[min(100%,520px)]">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-[520px_minmax(0,600px)] lg:gap-16 xl:gap-24">
+          <div className="flex min-w-0 flex-col">
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-brand sm:text-[11px]">
               {content.eyebrow}
             </p>
 
-            <h2 className="mt-4 font-display uppercase tracking-tight leading-[0.9] text-4xl min-[400px]:text-5xl sm:mt-6 sm:text-6xl lg:text-7xl xl:text-8xl">
-              <span className="block text-foreground">{content.titleLine1}</span>
-              <span className="block text-foreground">{content.titleLine2}</span>
+            <h2 className="mt-4 w-full min-w-0 font-display text-[clamp(2.5rem,12vw+1rem,3.75rem)] leading-[0.9] uppercase tracking-tight sm:mt-6 sm:text-6xl lg:text-7xl xl:text-8xl">
+              <span className="block text-foreground">
+                {content.titleLine1}
+              </span>
+              <span className="block text-foreground">
+                {content.titleLine2}
+              </span>
               <span className="block text-brand">{content.titleLine3}</span>
             </h2>
 
@@ -31,8 +35,9 @@ export function IntroSection({ content }: IntroSectionProps) {
 
               <div
                 aria-hidden
-                className="hidden min-[480px]:block w-px shrink-0 self-stretch bg-border-strong"
+                className="hidden w-px shrink-0 self-stretch bg-border-strong min-[480px]:block"
               />
+
               <div
                 aria-hidden
                 className="h-px w-full bg-border-strong min-[480px]:hidden"
@@ -44,16 +49,16 @@ export function IntroSection({ content }: IntroSectionProps) {
             </div>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col gap-6 sm:gap-8 lg:gap-10 lg:pt-1">
+          <div className="flex flex-col justify-center gap-6 sm:gap-8 lg:gap-10">
             <span aria-hidden className="block h-px w-10 bg-brand" />
 
-            <p className="max-w-none text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
+            <p className="max-w-[55ch] text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
               {content.paragraphs[0]}
             </p>
 
             <hr className="border-0 border-t border-border-strong/40" />
 
-            <p className="max-w-none text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
+            <p className="max-w-[55ch] text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
               {content.paragraphs[1]}
             </p>
           </div>

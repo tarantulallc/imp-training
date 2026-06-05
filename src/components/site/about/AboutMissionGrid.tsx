@@ -6,7 +6,9 @@ type AboutMissionGridProps = {
   content: AboutMessages["mission"];
 };
 
-function flattenMissionRows(columns: AboutMessages["mission"]["columns"]): AboutPillar[] {
+function flattenMissionRows(
+  columns: AboutMessages["mission"]["columns"],
+): AboutPillar[] {
   const topRow = columns.map((column) => column[0]);
   const bottomRow = columns.map((column) => column[1]);
   return [...topRow, ...bottomRow];

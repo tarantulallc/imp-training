@@ -1,6 +1,7 @@
 import { localizeHref, getRequestLocale } from "@/lib/i18n-server";
 import { siteConfig, type NavItem, type SiteConfig } from "@/lib/site-config";
 import { getNavMessages, translateNavItems } from "@/messages/nav";
+import { StickyNavbarShell } from "./StickyNavbarShell";
 import { TopBar } from "./TopBar";
 import { TrainingNavbar } from "./TrainingNavbar";
 
@@ -29,15 +30,17 @@ export async function SiteHeader({ config = siteConfig }: SiteHeaderProps = {}) 
   ]);
 
   return (
-    <header className="sticky top-0 z-50">
-      <TopBar locales={config.locales} contact={config.contact} />
-      <div className="bg-black">
+    <>
+      <header>
+        <TopBar locales={config.locales} contact={config.contact} />
+      </header>
+      <StickyNavbarShell>
         <TrainingNavbar
           brandHref={brandHref}
           items={primaryNav}
           cta={{ label: nav.register, href: ctaHref }}
         />
-      </div>
-    </header>
+      </StickyNavbarShell>
+    </>
   );
 }
