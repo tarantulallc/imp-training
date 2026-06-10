@@ -14,7 +14,7 @@ export async function TrainingHero({ content }: TrainingHeroProps) {
   return (
     <section className="relative isolate w-full overflow-hidden min-h-[min(100svh,48rem)] sm:min-h-[70vh] lg:min-h-[85svh]">
       <Image
-        src="/images/herot.svg"
+        src="/images/heroT.svg"
         alt={content.imageAlt}
         width={1920}
         height={1080}
