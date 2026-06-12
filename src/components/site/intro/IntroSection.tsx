@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import type { HomeMessages } from "@/messages/home";
 import { INTRO_PARTNER_NAME } from "./intro-assets";
-
+import Image from "next/image";
 type IntroSectionProps = {
   content: HomeMessages["intro"];
 };
@@ -49,7 +49,7 @@ export function IntroSection({ content }: IntroSectionProps) {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center gap-6 sm:gap-8 lg:gap-10">
+          <div className="flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 mt-10">
             <span aria-hidden className="block h-px w-10 bg-brand" />
 
             <p className="max-w-[55ch] text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
@@ -61,6 +61,15 @@ export function IntroSection({ content }: IntroSectionProps) {
             <p className="max-w-[55ch] text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
               {content.paragraphs[1]}
             </p>
+            <div className="-mt-20 -ml-5">
+              <Image
+                src="/images/haas-automation-inc-logo.svg"
+                alt="Haas Automation"
+                width={160}
+                height={60}
+                className="w-full max-w-[260px] h-auto object-contain"
+              />            
+            </div>
           </div>
         </div>
       </Container>
