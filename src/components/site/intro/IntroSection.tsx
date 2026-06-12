@@ -61,9 +61,9 @@ export function IntroSection({ content }: IntroSectionProps) {
             <p className="max-w-[55ch] text-base leading-relaxed text-muted sm:text-[17px] lg:text-lg lg:leading-[1.75]">
               {content.paragraphs[1]}
             </p>
-            <div className="-mt-20 -ml-5">
+            <div className="mt-3">
               <Image
-                src="/images/haas-automation-inc-logo.svg"
+                src="/images/tec svg tk.svg"
                 alt="Haas Automation"
                 width={160}
                 height={60}
